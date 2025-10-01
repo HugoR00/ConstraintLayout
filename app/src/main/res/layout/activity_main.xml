@@ -5,15 +5,124 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="24dp"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textview_identification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Olá, Hugo Ribeiro!"
+        app:layout_constraintTop_toTopOf="@+id/main"
+        app:layout_constraintStart_toStartOf="@+id/main"
+         />
 
+    <TextView
+        android:id="@+id/textview_learn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O que vamos aprender hoje?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/textview_identification"
+        app:layout_constraintStart_toStartOf="@+id/textview_identification"
+        />
+
+    <ImageView
+        android:id="@+id/imageview_roxo"
+        android:layout_width="152dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/image_development"
+        app:layout_constraintEnd_toStartOf="@id/imageview_amarelo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_learn" />
+
+    <ImageView
+        android:id="@+id/imageview_amarelo"
+        android:layout_width="152dp"
+        android:layout_height="152dp"
+        android:src="@drawable/image_design"
+        android:layout_marginTop="68dp"
+        app:layout_constraintTop_toBottomOf="@id/textview_learn"
+        app:layout_constraintStart_toEndOf="@+id/imageview_roxo"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/imageview_verde"
+        android:layout_width="152dp"
+        android:layout_height="152dp"
+        android:src="@drawable/image_ai"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/imageview_roxo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageview_vermelho"
+        />
+
+    <ImageView
+        android:id="@+id/imageview_vermelho"
+        android:layout_width="152dp"
+        android:layout_height="152dp"
+        android:src="@drawable/image_explore"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/imageview_amarelo"
+        app:layout_constraintStart_toEndOf="@id/imageview_verde"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textview_cursos_populares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Cursos populares"
+        app:layout_constraintTop_toBottomOf="@id/imageview_verde"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/textview_ver_todos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Ver todos"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imageview_vermelho"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <View
+        android:id="@+id/view_background_purple"
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/image_background"
+        app:layout_constraintTop_toBottomOf="@id/textview_cursos_populares"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textview_android_development"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Desenvolvimento Android"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textview_cursos_populares"
+        app:layout_constraintBottom_toBottomOf="@id/view_background_purple"
+        app:layout_constraintStart_toStartOf="@id/view_background_purple"
+        />
+
+    <ImageView
+        android:id="@+id/imageview_android_logo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/android_white"
+        app:layout_constraintTop_toBottomOf="@id/textview_ver_todos"
+        app:layout_constraintBottom_toBottomOf="@id/view_background_purple"
+        app:layout_constraintEnd_toEndOf="@id/view_background_purple"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
